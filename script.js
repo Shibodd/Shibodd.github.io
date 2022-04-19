@@ -27,6 +27,7 @@ function onFocus() {
 
     if (selectionChanged) {
         nextCharacter();
+        textInput.value = "";
         selectionChanged = false;
     }
     
