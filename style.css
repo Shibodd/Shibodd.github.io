@@ -1,13 +1,30 @@
-html {
+.sans-serif {
     font-family: 'Noto Sans JP', sans-serif;
 }
+.serif {
+    font-family: 'BIZ UDMincho', serif;
+}
+
 
 #text-display {
-    font-size: 1in;
+    font-size: 1.5in;
     text-align: center;
 }
 
 
+.kana-table-character  {
+    cursor: pointer;
+    opacity: 0.5;
+    transition: opacity 0.2s;
+}
+
+.selected-character {
+    opacity: 1;
+}
+
+#kana-table {
+    font-size: 0.3in;
+}
 
 .hide-text-selection::selection {
     background-color: transparent;
@@ -23,17 +40,18 @@ html {
     font-size: 0.25in;
 }
 
-#lightmode-panel {
+#switch-panel {
     z-index: 999;
     position: absolute;
     float:left;
 }
-#lightmode-button {
+
+.hoverbutton {
     opacity: 0.5;
     transition: opacity 0.1s;
     cursor: pointer;
 }
-#lightmode-button:hover {
+.hoverbutton:hover {
     opacity: 1;
 }
 
@@ -59,7 +77,7 @@ html {
 }
 
 #text-input {
-    font-size: 0.3in;
+    font-size: 0.5in;
     border: none;
     border-radius: 6px;
     box-sizing: border-box;
