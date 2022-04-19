@@ -1,6 +1,33 @@
 <!DOCTYPE html>
 <html>
-    <body>
-        Hello World!
+    <head>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap" rel="stylesheet">
+        <link href="./style.css" rel="stylesheet">
+
+        <script src="./script.js"></script>
+    </head>
+    <body class="lightswitching">
+        <header id="lightmode-panel" class="hide-on-focus">
+            <span id="lightmode-button" class="hide-text-selection" onclick="switchLight()">
+                Toggle Light
+            </span>
+        </header>
+        <main id="main">
+            <div id="text-display" class="blur-on-unfocused hide-text-selection">
+                の
+            </div>
+            <div id="unfocused-overlay" onclick="onFocus()" class="hide-on-focus">
+                Click here to focus
+            </div>
+            <input id="text-input" type="text" class="blur-on-unfocused" onblur="onUnfocus()" onclick="onFocus()" onkeydown="onKeyDown(event)">
+        </main>
+
+        <div id="kanaselect-panel">
+            <table>
+                
+            </table>
+        </div>
     </body>
 </html>
