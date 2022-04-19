@@ -25,7 +25,7 @@ function onFocus() {
     for (let element of elementsToHide)
         element.classList.add('hidden');
 
-    if (selectionChanged) {
+    if (selectionChanged && !kana[characterToGuess].selected) {
         nextCharacter();
         textInput.value = "";
         selectionChanged = false;
